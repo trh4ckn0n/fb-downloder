@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Video Downloader</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="card">
+            <h1 class="top-right-title"><i class="fab fa-facebook"></i> FB Video Downloader</h1>
+            <p>Paste a Facebook video link below to get started.</p>
+
+            <div class="input-group">
+                <input type="text" id="videoLink" placeholder="Paste Facebook Video URL">
+                <button onclick="fetchVideoQualities()">
+                    <i class="fa fa-download"></i> Get Links
+                </button>
+            </div>
+
+            <div id="videoDetails" class="hidden">
+                <h3 id="videoTitle"></h3>
+                <img id="videoThumbnail" class="video-thumbnail">
+            </div>
+
+            <div id="qualityContainer" class="hidden">
+                <h3>Select Quality:</h3>
+                <select id="qualitySelect"></select>
+                <button onclick="downloadVideo()">
+                    <i class="fa fa-cloud-download-alt"></i> Download
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
