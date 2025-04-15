@@ -1,10 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600&display=swap');
+
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #1e1e2f, #3a3a5e);
-    color: #fff;
+    font-family: 'Orbitron', sans-serif;
+    background: radial-gradient(circle at top, #0d0d0d, #1a1a2e);
+    color: #00ffe1;
     text-align: center;
     height: 100vh;
+    margin: 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,32 +22,57 @@ body {
 }
 
 .card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px #00ffe1;
+    width: 370px;
     text-align: center;
 }
 
-.card h1 {
-    font-size: 22px;
-    margin-bottom: 10px;
+/* Hacker Border & Glow */
+.neon-border {
+    border: 2px solid #00ffe1;
+    animation: pulse-border 2s infinite;
 }
 
-/* Input Box */
+@keyframes pulse-border {
+    0% { box-shadow: 0 0 10px #00ffe1; }
+    50% { box-shadow: 0 0 20px #00ffc3, 0 0 30px #00ffc3; }
+    100% { box-shadow: 0 0 10px #00ffe1; }
+}
+
+/* Title & Glow */
+h1.glow {
+    font-size: 24px;
+    color: #00ffe1;
+    text-shadow: 0 0 5px #00ffe1, 0 0 10px #00c9ff;
+}
+
+h3.glow-soft {
+    color: #fff;
+    text-shadow: 0 0 3px #00ffe1;
+}
+
+.highlight {
+    color: #ff00ff;
+}
+
+/* Input */
 .input-group {
     display: flex;
     flex-direction: column;
-    margin: 15px 0;
+    margin: 20px 0;
 }
 
 .input-group input {
     width: 100%;
     padding: 12px;
-    border: none;
-    border-radius: 8px;
+    background: #111;
+    border: 2px solid #00ffe1;
+    border-radius: 10px;
+    color: #fff;
     text-align: center;
     font-size: 14px;
     outline: none;
@@ -52,47 +80,49 @@ body {
 
 /* Buttons */
 button {
-    background: #007bff;
+    background: linear-gradient(45deg, #00ffe1, #ff00ff);
     border: none;
     padding: 12px;
-    color: white;
+    color: #000;
+    font-weight: bold;
     cursor: pointer;
     font-size: 14px;
-    border-radius: 8px;
+    border-radius: 10px;
     transition: 0.3s;
     margin-top: 10px;
     width: 100%;
 }
 
 button:hover {
-    background: #0056b3;
+    filter: brightness(1.2);
+    transform: scale(1.05);
 }
 
 /* Video Details */
-#videoDetails {
-    margin-top: 15px;
-}
-
 .video-thumbnail {
     width: 100%;
     border-radius: 10px;
     margin-top: 10px;
+    border: 2px solid #00ffe1;
 }
 
-/* Quality Selection */
-#qualityContainer {
-    margin-top: 20px;
+.neon-glow {
+    box-shadow: 0 0 10px #00ffe1;
 }
 
+/* Select */
 select {
     width: 100%;
     padding: 10px;
+    background: #111;
+    border: 2px solid #00ffe1;
+    color: #fff;
     border-radius: 8px;
     font-size: 14px;
     margin-bottom: 10px;
 }
 
-/* Hidden class for elements */
+/* Hidden class */
 .hidden {
     display: none;
 }
