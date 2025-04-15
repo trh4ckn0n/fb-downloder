@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>trhacknon FB Video Downloader</title>
+    <title>trhacknon FB Downloader</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
 
     <div class="container">
-        <div class="card neon-border">
-            <h1 class="glow"><i class="fab fa-facebook"></i> FB Video Downloader by <span class="highlight">trhacknon</span></h1>
-            <p>Paste a Facebook video link below to get started.</p>
+        <div class="card">
+            <img src="https://g.top4top.io/p_33928j6un0.jpg" class="banner-img" alt="banner">
+
+            <h1><i class="fab fa-facebook"></i> trhacknon FB Video Downloader</h1>
+            <p class="subtitle">Paste a Facebook video link below to get started.</p>
 
             <div class="input-group">
                 <input type="text" id="videoLink" placeholder="Paste Facebook Video URL">
@@ -22,8 +24,8 @@
             </div>
 
             <div id="videoDetails" class="hidden">
-                <h3 id="videoTitle" class="glow-soft"></h3>
-                <img id="videoThumbnail" class="video-thumbnail neon-glow">
+                <h3 id="videoTitle"></h3>
+                <img id="videoThumbnail" class="video-thumbnail">
             </div>
 
             <div id="qualityContainer" class="hidden">
@@ -33,6 +35,10 @@
                     <i class="fa fa-cloud-download-alt"></i> Download
                 </button>
             </div>
+
+            <footer>
+                <p>Powered by <strong>trhacknon</strong> | Just for fun & learning</p>
+            </footer>
         </div>
     </div>
 
